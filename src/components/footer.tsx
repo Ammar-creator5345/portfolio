@@ -4,7 +4,7 @@ import { NightIcon } from "../svgs/nightModeIcon";
 
 const Footer = () => {
   return (
-    <div className="text-white fixed z-[999999] shadow-[1px_1px_6px_#1e1e21] -translate-x-1/2 duration-300 bottom-3 left-1/2 backdrop-blur-xl bg-black/10 ease-in-out flex justify-between items-center w-[130px] p-1 px-2 rounded-full border border-white/20 transition-all hover:w-[160px] hover:py-[6px]">
+    <div className="text-white fixed z-[1000] shadow-[1px_1px_6px_#1e1e21] -translate-x-1/2 duration-300 bottom-3 left-1/2 backdrop-blur-xl bg-black/10 ease-in-out flex justify-between items-center w-[130px] p-1 px-2 rounded-full border border-white/20 transition-all hover:w-[160px] hover:py-[6px]">
       <a href="https://github.com/Ammar-creator5345/" target="_blank" className="rounded-full p-2 flex items-center justify-center hover:bg-[#361212]">
         <GithubIcon width={23} height={23} />
       </a>
