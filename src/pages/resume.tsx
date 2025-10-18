@@ -26,7 +26,7 @@ const Resume = () => {
     </div>
   );
   return (
-    <div className="pt-12 pb-[70px] px-5">
+    <div className="pt-14 pb-[70px] px-5">
       <DecoratedHeader heading="RESUME" subHeading="MY" text="RESUME" />
       <div className="max-w-[600px] m-auto mt-4">
         <h1 className="text-2xl my-2 font-bold bg-gradient-to-b bg-clip-text text-transparent from-[#6668eb] to-[#ecec56] w-fit">

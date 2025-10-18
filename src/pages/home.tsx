@@ -7,7 +7,7 @@ const Home = () => {
       <div className="max-w-[650px] m-auto">
         <div className="flex justify-between text-white items-center gap-10">
           <div className="flex flex-col flex-1">
-            <h1 className="text-2xl font-semibold md:text-5xl ">
+            <h1 className="text-2xl font-semibold mt-5 md:text-5xl md:mt-0">
               Hi, I'm Ammar
             </h1>
             <h3 className="text-lg font-semibold mt-9 md:text-2xl">
