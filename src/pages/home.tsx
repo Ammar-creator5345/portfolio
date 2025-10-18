@@ -54,7 +54,7 @@ const Home = () => {
                I built it using React.js and Tailwind CSS, focusing on a clean and
                interactive design that makes the whole experience smooth and user-friendly"
               languages={["React.js", "JavaScript", "Tailwind"]}
-              image="./growhire.png"
+              image="./growhirePhoto.png"
               link="https://grow-hire.vercel.app/"
             />
             <ProjectItem
@@ -65,7 +65,7 @@ const Home = () => {
                links to show related movies. Focused on responsive design and
                smooth navigation.I built it with React.js and pure Css to enhance my skills"
               languages={["React.js", "JavaScript", "Css"]}
-              image="/movieverse.png"
+              image="/movieversePhoto.png"
               link="https://movie-verse-dun.vercel.app/"
             />
           </div>
