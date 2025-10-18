@@ -17,7 +17,7 @@ const Home = () => {
           </div>
           <div className="rounded-lg w-full max-w-[250px] aspect-square sm:max-w-[220px] md:max-w-[250px]">
             <img
-              src="photo.png"
+              src="/photo.png"
               alt="profilePic"
               className="w-full h-full object-cover rounded-lg"
             />
@@ -65,7 +65,7 @@ const Home = () => {
                links to show related movies. Focused on responsive design and
                smooth navigation.I built it with React.js and pure Css to enhance my skills"
               languages={["React.js", "JavaScript", "Css"]}
-              image="movieverse.png"
+              image="/movieverse.png"
               link="https://movie-verse-dun.vercel.app/"
             />
           </div>
