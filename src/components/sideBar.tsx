@@ -24,8 +24,7 @@ const SideBar: React.FC<PropsType> = ({ open, setOpen }) => {
             width: "300px",
             height: "100%",
             boxShadow: "1px 1px 10px red",
-            // position:"relative",
-            zIndex:"999999"
+            zIndex: "999999",
           },
         },
       }}
