@@ -69,7 +69,7 @@ const Contact = () => {
       <div className="py-14">
         <DecoratedHeader heading="EMAIL" subHeading="CONTACT" text="ME" />
         <div className="text-white mt-4 flex flex-col gap-[70px] items-center justify-between p-4 mx-[10px] lg:items-start lg:flex-row md:mx-[70px]">
-          <div className="ml-6 mt-[90px]">
+          <div className="ml-6 mt-[4px] md:mt-[70px]">
             <div className="text-center lg:text-start">
               <h1 className="text-4xl font-semibold w-full lg:w-1/2">
                 Let's build something greater

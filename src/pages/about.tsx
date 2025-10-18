@@ -27,7 +27,7 @@ const About = () => {
     </div>
   );
   return (
-    <div className="pt-[60px] px-10 bg-black md:px-16">
+    <div className="pt-[60px] pb-[65px] px-10 bg-black md:px-16">
       <div>
         <DecoratedHeader heading="PROFILE" subHeading="ABOUT" text="ME" />
         <div className="px-6 flex flex-col mt-3 gap-12 min-[850px]:flex-row">
