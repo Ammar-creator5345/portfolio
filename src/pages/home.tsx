@@ -1,11 +1,14 @@
+import { useEffect } from "react";
 import ProjectItem from "../components/projectItem";
 import SectionItem from "../components/sectionItem";
+import { useTheme } from "../context/theme";
 
 const Home = () => {
+  const { theme } = useTheme();
   return (
-    <div className="bg-[#000000] p-4 py-10 pb-[65px]">
+    <div className="p-4 py-10 pb-[65px]">
       <div className="max-w-[650px] m-auto">
-        <div className="flex justify-between text-white items-center gap-10">
+        <div className="flex justify-between text-primaryText items-center gap-10">
           <div className="flex flex-col flex-1">
             <h1 className="text-2xl font-semibold mt-5 md:text-5xl md:mt-0">
               Hi, I'm Ammar
@@ -17,13 +20,13 @@ const Home = () => {
           </div>
           <div className="rounded-lg w-full max-w-[250px] aspect-square sm:max-w-[220px] md:max-w-[250px]">
             <img
-              src="/photo.png"
+              src={theme === "light" ? "/profile2.png" : "/photo.png"}
               alt="profilePic"
               className="w-full h-full object-cover rounded-lg"
             />
           </div>
         </div>
-        <div className="mt-20 text-white">
+        <div className="mt-20 text-primaryText">
           <h3 className="text-2xl font-semibold">About</h3>
           <p className="text-sm font-[500] text-[#8c8c8d]">
             As a passionate React.js Developer with around one year of

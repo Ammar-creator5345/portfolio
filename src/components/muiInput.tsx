@@ -2,6 +2,7 @@ import TextField from "@mui/material/TextField";
 import React from "react";
 import { FormikProps } from "formik";
 import { JSX } from "react";
+import { useTheme } from "../context/theme";
 
 type PropsType = {
   formik: any;
@@ -14,6 +15,9 @@ export default function MuiInput({
   keyName,
   label,
 }: PropsType): JSX.Element {
+  const { theme } = useTheme();
+  const isDark: boolean = theme === "dark";
+  const border: string = isDark ? "1px solid #3d3a3a" : "1px solid #e5d5d5";
   return (
     <TextField
       id="outlined-basic"
@@ -33,25 +37,25 @@ export default function MuiInput({
       sx={{
         width: "100%",
         "& .MuiInputLabel-root": {
-          color: "white",
+          color: isDark ? "white" : "black",
         },
         "& .MuiInputBase-input": {
-          color: "white",
+          color: isDark ? "white" : "black",
         },
         "& .MuiOutlinedInput-notchedOutline": {
-          border: "1px solid #3d3a3a",
+          border: border,
           outline: "none",
         },
         "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-          border: "1px solid #3d3a3a",
+          border: border,
           outline: "none",
         },
         "& .Mui-focused.MuiInputLabel-root": {
           color: "gray",
         },
         "& .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline": {
-          border: "1px solid #3d3a3a",
-          outline:"none"
+          border: border,
+          outline: "none",
         },
         "& .MuiFormHelperText-root": {
           color: "red",

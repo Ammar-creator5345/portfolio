@@ -8,7 +8,7 @@ const About = () => {
   const InputItem = ({ title, subTitle }: funcTypes) => (
     <div className="flex items-center gap-1 mt-1">
       <span className="text-[#666666] font-semibold">{title}:</span>
-      <span className="font-[500]">{subTitle}</span>
+      <span className="font-[500] text-black dark:text-white">{subTitle}</span>
     </div>
   );
   const SectionItem = ({
@@ -18,7 +18,7 @@ const About = () => {
     title: string;
     subTitle: string;
   }) => (
-    <div className="border border-white/40 shadow-[1px_1px_6px_#282626] rounded-lg text-white p-5 w-[190px] h-[160px]">
+    <div className="border border-[#b6b4b4] dark:border-white/40 dark:shadow-[1px_1px_6px_#282626] rounded-lg text-white p-5 w-[190px] h-[160px]">
       <h1 className="text-4xl font-bold text-[orange]">{title}</h1>
       <div className="flex gap-3 pr-4 mt-2">
         <p className="w-9 h-[1px] mt-3 bg-[#aca9a9]"></p>
@@ -27,7 +27,7 @@ const About = () => {
     </div>
   );
   return (
-    <div className="pt-[60px] pb-[65px] px-10 bg-black md:px-16">
+    <div className="pt-[60px] pb-[65px] px-10 md:px-16">
       <div>
         <DecoratedHeader heading="PROFILE" subHeading="ABOUT" text="ME" />
         <div className="px-6 flex flex-col mt-3 gap-12 min-[850px]:flex-row">

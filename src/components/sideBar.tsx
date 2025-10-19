@@ -2,12 +2,14 @@ import Drawer from "@mui/material/Drawer";
 import React from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import { NavLink } from "react-router-dom";
+import { useTheme } from "../context/theme";
 
 type PropsType = {
   open: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 const SideBar: React.FC<PropsType> = ({ open, setOpen }) => {
+  const { theme } = useTheme();
   const navlinks = [
     { name: "HOME", path: "/" },
     { name: "ABOUT", path: "/about" },
@@ -20,13 +22,17 @@ const SideBar: React.FC<PropsType> = ({ open, setOpen }) => {
       slotProps={{
         paper: {
           sx: {
-            bgcolor: "rgba(0,0,0,1)",
+            bgcolor: theme === "light" ? "white" : "black",
             width: "300px",
             height: "100%",
-            boxShadow: "1px 1px 10px red",
+            boxShadow:
+              theme === "light" ? "1px 1px 6px gray" : "1px 1px 10px red",
             zIndex: "999999",
           },
         },
+      }}
+      ModalProps={{
+        BackdropProps: { style: { backgroundColor: "rgba(0, 0, 0, 0.2)" } },
       }}
       open={open}
       onClose={() => setOpen(false)}
@@ -35,9 +41,9 @@ const SideBar: React.FC<PropsType> = ({ open, setOpen }) => {
         <div>
           <button
             onClick={() => setOpen(false)}
-            className="bg-[#000000] py-[6px] px-2 rounded-md ml-2 mt-[5px] flex items-center justify-center hover:bg-[#0e0d0d]"
+            className="py-[6px] px-2 rounded-md ml-2 mt-[5px] flex items-center justify-center hover:bg-[#e7e4e4] dark:hover:bg-[#0e0d0d]"
           >
-            <CloseIcon sx={{ color: "white" }} />
+            <CloseIcon sx={{ color: theme === "light" ? "black" : "white" }} />
           </button>
         </div>
         <div className="flex items-center justify-center h-full">
@@ -59,8 +65,9 @@ const SideBar: React.FC<PropsType> = ({ open, setOpen }) => {
           </div>
         </div>
         <div>
-          <h3 className="text-[#666666] font-[500] text-sm text-center">
-            © 2025 <b className="text-[#8a8989]">Ammar</b>. All rights reserved.
+          <h3 className="dark:text-[#666666] font-[500] text-sm text-center">
+            © 2025 <b className="text-black dark:text-[#8a8989]">Ammar</b>. All
+            rights reserved.
           </h3>
         </div>
       </div>
