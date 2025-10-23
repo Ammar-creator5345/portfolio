@@ -78,7 +78,7 @@ const About = () => {
             className="flex items-center justify-center gap-4 flex-wrap md:justify-end"
           >
             <SectionItem title="1+" subTitle="Years of Experience" />
-            <SectionItem title="5+" subTitle="Personal & Practice Projects" />
+            <SectionItem title="10+" subTitle="Personal & Practice Projects" />
             <SectionItem title="∞" subTitle="Passion for Front-End Craft" />
             <SectionItem title="Always" subTitle="Eager to Collaborate" />
           </motion.div>
