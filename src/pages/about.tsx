@@ -1,10 +1,11 @@
 import DecoratedHeader from "../components/decoratedHeader";
+import { motion, stagger } from "framer-motion";
 
+interface funcTypes {
+  title: string;
+  subTitle: string;
+}
 const About = () => {
-  interface funcTypes {
-    title: string;
-    subTitle: string;
-  }
   const InputItem = ({ title, subTitle }: funcTypes) => (
     <div className="flex items-center gap-1 mt-1">
       <span className="text-[#666666] font-semibold">{title}:</span>
@@ -26,12 +27,25 @@ const About = () => {
       </div>
     </div>
   );
+  const fadeIn = {
+    hidden: { opacity: 0, y: 12 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+  const mainDiv = {
+    hidden: {},
+    visible: { transition: { delayChildren: stagger(0.4) } },
+  };
   return (
-    <div className="pt-[60px] pb-[65px] px-10 md:px-16">
+    <div className="pt-[40px] pb-[65px] px-10 md:px-16">
       <div>
         <DecoratedHeader heading="PROFILE" subHeading="ABOUT" text="ME" />
-        <div className="px-6 flex flex-col mt-3 gap-12 min-[850px]:flex-row">
-          <div className="text-white">
+        <motion.div
+          variants={mainDiv}
+          initial="hidden"
+          whileInView="visible"
+          className="px-6 flex flex-col mt-3 gap-12 min-[850px]:flex-row"
+        >
+          <motion.div variants={fadeIn} className="text-white">
             <h1 className="text-2xl font-bold bg-gradient-to-b bg-clip-text text-transparent from-[#6668eb] to-[#ecec56] w-fit">
               PERSONAL INFOS
             </h1>
@@ -58,14 +72,17 @@ const About = () => {
                 DOWNLOAD RESUME
               </a>
             </div>
-          </div>
-          <div className="flex items-center justify-center gap-4 flex-wrap md:justify-end">
+          </motion.div>
+          <motion.div
+            variants={fadeIn}
+            className="flex items-center justify-center gap-4 flex-wrap md:justify-end"
+          >
             <SectionItem title="1+" subTitle="Years of Experience" />
             <SectionItem title="5+" subTitle="Personal & Practice Projects" />
             <SectionItem title="∞" subTitle="Passion for Front-End Craft" />
             <SectionItem title="Always" subTitle="Eager to Collaborate" />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );

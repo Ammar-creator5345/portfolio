@@ -9,6 +9,7 @@ import TypescriptIcon from "../svgs/typescriptIcon";
 import TailwindIcon from "../svgs/tailwindIcon";
 import ReduxIcon from "../svgs/reduxIcon";
 import GitIcon from "../svgs/gitIcon";
+import { motion, stagger } from "framer-motion";
 
 const Resume = () => {
   const Skill = ({
@@ -25,14 +26,36 @@ const Resume = () => {
       <p className="horizontal2"></p>
     </div>
   );
+
+  const mainDivAnimation = {
+    hidden: {},
+    visible: { transition: { delayChildren: stagger(0.4) } },
+  };
+  const fadeIn = {
+    hidden: { opacity: 0, y: 12, filter: "blur(5px)" },
+    visible: {
+      opacity: 1,
+      y: 0,
+      filter: "blur(0px)",
+      transition: { duration: 0.6 },
+    },
+  };
   return (
     <div className="pt-14 pb-[70px] px-5">
       <DecoratedHeader heading="RESUME" subHeading="MY" text="RESUME" />
-      <div className="max-w-[600px] m-auto mt-4">
-        <h1 className="text-2xl my-2 font-bold bg-gradient-to-b bg-clip-text text-transparent from-[#6668eb] to-[#ecec56] w-fit">
+      <motion.div
+        variants={mainDivAnimation}
+        initial="hidden"
+        whileInView="visible"
+        className="max-w-[600px] m-auto mt-4"
+      >
+        <motion.h1
+          variants={fadeIn}
+          className="text-2xl my-2 font-bold bg-gradient-to-b bg-clip-text text-transparent from-[#6668eb] to-[#ecec56] w-fit"
+        >
           Work Experience
-        </h1>
-        <div className="px-2">
+        </motion.h1>
+        <motion.div variants={fadeIn} className="px-2">
           <div className="text-white flex flex-col gap-2 p-3 sm:flex-row sm:gap-6">
             <div className="w-[50px] h-[50px] min-w-[50px] min-h-[50px] border dark:border-none rounded-full overflow-hidden">
               <img
@@ -142,8 +165,8 @@ const Resume = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div variants={fadeIn}>
           <h1 className="text-2xl font-bold bg-gradient-to-b bg-clip-text text-transparent from-[#6668eb] to-[#ecec56] w-fit">
             Education
           </h1>
@@ -183,8 +206,8 @@ const Resume = () => {
               <p className="text-[#666666] text-sm font-[500]">2023 - 2025</p>
             </div>
           </div>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div variants={fadeIn}>
           <h1 className="text-2xl font-bold bg-gradient-to-b bg-clip-text text-transparent from-[#6668eb] to-[#ecec56] w-fit">
             Skills
           </h1>
@@ -216,8 +239,8 @@ const Resume = () => {
             />
             <Skill language="Git" icon={<GitIcon width={50} height={50} />} />
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };

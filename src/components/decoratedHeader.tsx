@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 type propsTypes = {
   heading: string;
@@ -12,7 +13,16 @@ const DecoratedHeader: React.FC<propsTypes> = ({
   text,
 }) => {
   return (
-    <div className="flex items-center justify-center">
+    <motion.div
+      initial={{ opacity: 0, filter: "blur(7px)" }}
+      whileInView={{
+        opacity: 1,
+        filter: "blur(0px)",
+        transition: { duration: 0.6 },
+      }}
+      viewport={{ once: true }}
+      className="flex items-center justify-center"
+    >
       <div className="relative w-fit">
         <h1 className="text-6xl text-[#F2F2F2] dark:text-[#0E0F0F] font-bold tracking-[5px] md:text-8xl">
           {heading}
@@ -21,7 +31,7 @@ const DecoratedHeader: React.FC<propsTypes> = ({
           {subHeading} <b className="text-[orange]">{text}</b>
         </h1>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

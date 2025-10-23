@@ -9,6 +9,7 @@ import "react-phone-input-2/lib/style.css";
 import { ChangeEvent, useState } from "react";
 import emailjs from "@emailjs/browser";
 import AlertDrawer from "../components/alertDrawer";
+import { motion, stagger } from "framer-motion";
 
 const Contact = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -62,14 +63,32 @@ const Contact = () => {
     validationSchema: validationSchema,
     onSubmit: (values) => sendEmail(values),
   });
+  const mainDivAnimation = {
+    hidden: {},
+    visible: { transition: { delayChildren: stagger(0.4) } },
+  };
+  const fadeIn = {
+    hidden: { opacity: 0, y: 12, filter: "blur(5px)" },
+    visible: {
+      opacity: 1,
+      y: 0,
+      filter: "blur(0px)",
+      transition: { duration: 0.6 },
+    },
+  };
 
   return (
     <>
       <AlertDrawer open={open} setOpen={setOpen} />
       <div className="py-14">
         <DecoratedHeader heading="EMAIL" subHeading="CONTACT" text="ME" />
-        <div className="text-white mt-4 flex flex-col gap-[70px] items-center justify-between p-4 mx-[10px] lg:items-start lg:flex-row md:mx-[70px]">
-          <div className="ml-6 mt-[4px] md:mt-[70px]">
+        <motion.div
+          variants={mainDivAnimation}
+          initial="hidden"
+          whileInView="visible"
+          className="text-white mt-4 flex flex-col gap-[70px] items-center justify-between p-4 mx-[10px] lg:items-start lg:flex-row md:mx-[70px]"
+        >
+          <motion.div variants={fadeIn} className="ml-6 mt-[4px] md:mt-[70px]">
             <div className="text-center lg:text-start">
               <h1 className="text-4xl text-primaryText font-semibold w-full lg:w-1/2">
                 Let's build something greater
@@ -78,8 +97,11 @@ const Contact = () => {
                 I'd love to hear from you. let's have a chat.
               </p>
             </div>
-          </div>
-          <div className="p-5 rounded-3xl min-w-[350px] max-w-[450px] border shadow-[1px_1px_6px_#bca7a7] dark:border-none dark:shadow-[1px_0px_5px_yellow,0px_0px_10px_blue]">
+          </motion.div>
+          <motion.div
+            variants={fadeIn}
+            className="p-5 rounded-3xl min-w-[350px] max-w-[450px] border shadow-[1px_1px_6px_#bca7a7] dark:border-none dark:shadow-[1px_0px_5px_yellow,0px_0px_10px_blue]"
+          >
             <form onSubmit={formik.handleSubmit}>
               <h1 className="text-2xl text-primaryText font-semibold">
                 Get in Touch
@@ -135,8 +157,8 @@ const Contact = () => {
                 </button>
               </div>
             </form>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </>
   );

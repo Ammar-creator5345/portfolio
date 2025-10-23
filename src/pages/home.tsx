@@ -1,7 +1,7 @@
-import { useEffect } from "react";
 import ProjectItem from "../components/projectItem";
 import SectionItem from "../components/sectionItem";
 import { useTheme } from "../context/theme";
+import { motion } from "framer-motion";
 
 const Home = () => {
   const { theme } = useTheme();
@@ -9,7 +9,11 @@ const Home = () => {
     <div className="p-4 py-10 pb-[65px]">
       <div className="max-w-[650px] m-auto">
         <div className="flex justify-between text-primaryText items-center gap-10">
-          <div className="flex flex-col flex-1">
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0, transition: { duration: 0.7 } }}
+            className="flex flex-col flex-1"
+          >
             <h1 className="text-2xl font-semibold mt-5 md:text-5xl md:mt-0">
               Hi, I'm Ammar
             </h1>
@@ -17,16 +21,24 @@ const Home = () => {
               Passionate React.js Developer focused on creating intuitive user
               experiences
             </h3>
-          </div>
-          <div className="rounded-lg w-full max-w-[250px] aspect-square sm:max-w-[220px] md:max-w-[250px]">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0, transition: { duration: 0.7 } }}
+            className="rounded-lg w-full max-w-[250px] aspect-square sm:max-w-[220px] md:max-w-[250px]"
+          >
             <img
               src={theme === "light" ? "/profile2.png" : "/photo.png"}
               alt="profilePic"
               className="w-full h-full object-cover rounded-lg"
             />
-          </div>
+          </motion.div>
         </div>
-        <div className="mt-20 text-primaryText">
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0, transition: { duration: 0.7 } }}
+          className="mt-20 text-primaryText"
+        >
           <h3 className="text-2xl font-semibold">About</h3>
           <p className="text-sm font-[500] text-[#8c8c8d]">
             As a passionate React.js Developer with around one year of
@@ -37,8 +49,17 @@ const Home = () => {
             experiences. Additionally, I also have experience in Game
             Development using Unity and C#.
           </p>
-        </div>
-        <div className="mt-12">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, filter: "blur(8px)" }}
+          viewport={{ once: true }}
+          whileInView={{
+            opacity: 1,
+            filter: "blur(0px)",
+            transition: { duration: 0.4 },
+          }}
+          className="mt-12"
+        >
           <div>
             <SectionItem
               title="My Projects"
@@ -72,8 +93,17 @@ const Home = () => {
               link="https://movie-verse-dun.vercel.app/"
             />
           </div>
-        </div>
-        <div className="mt-12 px-10">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, filter: "blur(6px)" }}
+          viewport={{ once: true }}
+          whileInView={{
+            opacity: 1,
+            filter: "blur(0px)",
+            transition: { duration: 0.3 },
+          }}
+          className="mt-12 px-10"
+        >
           <SectionItem title="Contact" subTitle="Get in Touch" onContact={true}>
             <div>
               Want to chat? Just shoot me a dm{" "}
@@ -88,7 +118,7 @@ const Home = () => {
               and I'll respond whenever I can. I will ignore all soliciting.
             </div>
           </SectionItem>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
