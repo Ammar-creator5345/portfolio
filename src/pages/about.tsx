@@ -36,7 +36,7 @@ const About = () => {
     visible: { transition: { delayChildren: stagger(0.4) } },
   };
   return (
-    <div className="pt-[40px] pb-[65px] px-10 md:px-16">
+    <div className="pt-[50px] pb-[65px] px-10 md:px-16">
       <div>
         <DecoratedHeader heading="PROFILE" subHeading="ABOUT" text="ME" />
         <motion.div
