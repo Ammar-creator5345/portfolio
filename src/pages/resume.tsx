@@ -62,7 +62,7 @@ const Resume = () => {
           <div className="text-white flex flex-col gap-2 p-3 sm:flex-row sm:gap-6">
             <div className="w-[50px] h-[50px] min-w-[50px] min-h-[50px] border dark:border-none rounded-full overflow-hidden">
               <img
-                src="https://media.licdn.com/dms/image/v2/D4D0BAQEGqwOa_CH_pA/company-logo_200_200/B4DZgxRdryHsAI-/0/1753173319177/hurtechsolutions_logo?e=1763596800&v=beta&t=kUro1Mfo-Fowyh01IuItE_DYggWxA7_o3ld7HpCEqfc"
+                src="https://media.licdn.com/dms/image/v2/D4D0BAQFH703r-CXyeQ/company-logo_200_200/B4DZoGp2nyJIAI-/0/1761048228314/hurtechllc_logo?e=1770249600&v=beta&t=uYPgzc7YZ-HAXalvMs_qPfMpgNeGJfrpYY2ag2mmCrk"
                 alt=""
                 className="w-full aspect-square"
               />
