@@ -79,7 +79,7 @@ const Resume = () => {
                 </div>
                 <div className="px-4 ml-2 mt-1 border-l-2 border-l-[#9e9797]">
                   <p className="text-sm text-[#898282] font-[500]">
-                    July 2025 - Oct 2025
+                    July 2025 - Dec 2025
                   </p>
                   <p className="text-[13px] pb-2 font-[500] text-black dark:text-white">
                     As a React Developer at Hur Tech, I contributed to building
@@ -146,20 +146,10 @@ const Resume = () => {
                 </div>
                 <div className="px-4 ml-2 mt-1 border-l-2 border-l-[#9e9797]">
                   <p className="text-sm text-[#898282] font-[500]">
-                    Oct 2023 - Sep 2024
+                    Feb 2024 - Sep 2024
                   </p>
                   <p className="text-[13px] pb-2 font-[500] text-black dark:text-white">
-                    As a passionate game developer, I have one year of hands-on
-                    experience in Unity, where I worked on different stages of
-                    game development such as design, prototyping, programming
-                    gameplay mechanics, and optimizing performance. My
-                    experience gave me a solid foundation in C# programming and
-                    the ability to implement features, solve technical
-                    challenges, and collaborate with designers and artists to
-                    bring creative ideas to life. While I’ve now moved on from
-                    Unity, the skills and knowledge I gained continue to shape
-                    the way I approach problem-solving and development, and I’m
-                    excited to apply them as I grow in the tech industry.
+As a beginner, I spent around 8 months learning Unity and C#, gaining foundational exposure to game development concepts such as basic game design, prototyping, and simple gameplay mechanics. This learning phase strengthened my C# fundamentals, logical thinking, and problem-solving skills, which continue to positively influence my approach to development.
                   </p>
                 </div>
               </div>
