@@ -10,8 +10,8 @@ import TailwindIcon from "../svgs/tailwindIcon";
 import ReduxIcon from "../svgs/reduxIcon";
 import GitIcon from "../svgs/gitIcon";
 import { motion, stagger } from "framer-motion";
-import NextIcon from "../svgs/reduxIcon";
-import BootstrapIcon from "../svgs/reduxIcon";
+import NextIcon from "../svgs/nextIcon";
+import BootstrapIcon from "../svgs/bootstrapIcon";
 
 
 const Resume = () => {
