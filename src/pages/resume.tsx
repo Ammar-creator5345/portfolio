@@ -10,6 +10,9 @@ import TailwindIcon from "../svgs/tailwindIcon";
 import ReduxIcon from "../svgs/reduxIcon";
 import GitIcon from "../svgs/gitIcon";
 import { motion, stagger } from "framer-motion";
+import NextIcon from "../svgs/reduxIcon";
+import BootstrapIcon from "../svgs/reduxIcon";
+
 
 const Resume = () => {
   const Skill = ({
@@ -149,7 +152,11 @@ const Resume = () => {
                     Feb 2024 - Sep 2024
                   </p>
                   <p className="text-[13px] pb-2 font-[500] text-black dark:text-white">
-As a beginner, I spent around 8 months learning Unity and C#, gaining foundational exposure to game development concepts such as basic game design, prototyping, and simple gameplay mechanics. This learning phase strengthened my C# fundamentals, logical thinking, and problem-solving skills, which continue to positively influence my approach to development.
+                   As a beginner, I spent around 8 months learning Unity and C#, gaining
+                   foundational exposure to game development concepts such as basic game
+                   design, prototyping, and simple gameplay mechanics. This learning phase 
+                   strengthened my C# fundamentals, logical thinking, and problem-solving
+                   skills, which continue to positively influence my approach to development.
                   </p>
                 </div>
               </div>
@@ -207,6 +214,10 @@ As a beginner, I spent around 8 months learning Unity and C#, gaining foundation
               icon={<ReactIcon width={60} height={60} />}
             />
             <Skill
+              language="Next.Js"
+              icon={<NextIcon width={50} height={50} />}
+            />
+            <Skill
               language="HTML5"
               icon={<HtmlIcon width={60} height={60} />}
             />
@@ -222,6 +233,10 @@ As a beginner, I spent around 8 months learning Unity and C#, gaining foundation
             <Skill
               language="Tailwind"
               icon={<TailwindIcon width={50} height={50} />}
+            />
+            <Skill
+              language="Bootstrap"
+              icon={<BootstrapIcon width={50} height={50} />}
             />
             <Skill
               language="Redux"
