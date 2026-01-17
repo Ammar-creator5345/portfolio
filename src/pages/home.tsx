@@ -41,13 +41,12 @@ const Home = () => {
         >
           <h3 className="text-2xl font-semibold">About</h3>
           <p className="text-sm font-[500] text-[#8c8c8d]">
-            As a passionate React.js Developer with around one year of
-            experience, I build responsive and user-focused web applications
-            using JavaScript, TypeScript, HTML, CSS, Tailwind CSS, and Git. I’m
-            committed to writing clean, efficient code and continuously
-            improving my skills to deliver smooth, high-quality user
-            experiences. Additionally, I also have experience in Game
-            Development using Unity and C#.
+           As a passionate React.js Developer with around one year of experience,
+            I build responsive and user-focused web applications using JavaScript,
+            TypeScript, React.js, Next.js, HTML, CSS, Tailwind CSS, and Bootstrap.
+            I use Git and GitHub for version control, and I’m committed to writing
+            clean, efficient code while continuously improving my skills to deliver
+            smooth, high-quality user experiences.
           </p>
         </motion.div>
         <motion.div
@@ -70,13 +69,24 @@ const Home = () => {
           </div>
           <div className="flex flex-col gap-4 items-center justify-center mt-12 sm:flex-row">
             <ProjectItem
+              title="NexChat"
+              date="Nov 2025 - jan 2026"
+              text="I developed a real-time web chat application that allows users
+              to communicate through text messages and share images, videos, and 
+              documents. The application includes detailed file previews and message
+              information, with a focus on smooth interactions and an intuitive messaging
+              experience built using React.js and modern frontend practices."
+              languages={["React.js", "TypeScript", "Tailwind"]}
+              image="/nexChat.png"
+              link="https://chat-app-cyan-two-88.vercel.app/"
+            />
+            <ProjectItem
               title="GrowHire"
               date="Aug 2025 - Oct 2025"
-              text="I developed a responsive platform for job seekers where users can 
-               build their resumes, chat with an AI-powered assistant, search and track
-               jobs, view job details, manage subscriptions, and adjust their settings.
-               I built it using React.js and Tailwind CSS, focusing on a clean and
-               interactive design that makes the whole experience smooth and user-friendly"
+              text="I developed a movie search app with API integration to fetch and
+               display movie details. Implemented cast details with clickable
+               links to show related movies. Focused on responsive design and
+               smooth navigation.I built it with React.js and pure Css to enhance my skills"
               languages={["React.js", "JavaScript", "Tailwind"]}
               image="./growhirePhoto.png"
               link="https://grow-hire.vercel.app/"
