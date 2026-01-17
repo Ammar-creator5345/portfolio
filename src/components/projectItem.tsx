@@ -19,7 +19,9 @@ const ProjectItem = ({
   return (
     <div className="w-full dark:shadow-[1px_1px_10px_#2d2b2b] rounded-xl overflow-hidden border border-[#dfdcdc] dark:border-[#333333] flex flex-col p-2 sm:w-1/2 sm:justify-between sm:min-h-[425px] transition-all duration-200 hover:shadow-[1px_1px_6px_gray]">
       <div>
-        <img src={image} alt="" />
+        <div className="w-full h-[100px]">
+          <img src={image} alt="project image" className="rounded-md w-full h-full object-cover"/>
+        </div>
         <div className="text-primaryText">
           <h1 className="text-lg font-semibold">{title}</h1>
           <p className="text-sm">{date}</p>

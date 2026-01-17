@@ -41,12 +41,13 @@ const Home = () => {
         >
           <h3 className="text-2xl font-semibold">About</h3>
           <p className="text-sm font-[500] text-[#8c8c8d]">
-           As a passionate React.js Developer with around one year of experience,
-            I build responsive and user-focused web applications using JavaScript,
-            TypeScript, React.js, Next.js, HTML, CSS, Tailwind CSS, and Bootstrap.
-            I use Git and GitHub for version control, and I’m committed to writing
-            clean, efficient code while continuously improving my skills to deliver
-            smooth, high-quality user experiences.
+            As a passionate React.js Developer with around one year of
+            experience, I build responsive and user-focused web applications
+            using JavaScript, TypeScript, React.js, Next.js, HTML, CSS, Tailwind
+            CSS, and Bootstrap. I use Git and GitHub for version control, and
+            I’m committed to writing clean, efficient code while continuously
+            improving my skills to deliver smooth, high-quality user
+            experiences.
           </p>
         </motion.div>
         <motion.div
@@ -67,15 +68,11 @@ const Home = () => {
               complex web applications. Here are a few of my favorites."
             />
           </div>
-          <div className="flex flex-col gap-4 items-center justify-center mt-12 sm:flex-row">
+          <div className="flex flex-col gap-1 items-center justify-center mt-12 sm:flex-row">
             <ProjectItem
               title="NexChat"
               date="Nov 2025 - jan 2026"
-              text="I developed a real-time web chat application that allows users
-              to communicate through text messages and share images, videos, and 
-              documents. The application includes detailed file previews and message
-              information, with a focus on smooth interactions and an intuitive messaging
-              experience built using React.js and modern frontend practices."
+              text="I built a real-time web chat application using React.js where users can exchange messages and share images, videos, and documents, including detailed file previews and message information, focusing on smooth interactions and a clean user experience."
               languages={["React.js", "TypeScript", "Tailwind"]}
               image="/nexChat.png"
               link="https://chat-app-cyan-two-88.vercel.app/"
