@@ -1,3 +1,5 @@
+import { SVGProps } from "react"
+
 export function NextIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
@@ -17,3 +19,9 @@ export function NextIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   )
 }
+
+
+
+
+
+
