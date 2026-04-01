@@ -62,7 +62,7 @@ const Resume = () => {
           <div className="text-white flex flex-col gap-2 p-3 sm:flex-row sm:gap-6">
             <div className="w-[50px] h-[50px] min-w-[50px] min-h-[50px] border dark:border-none rounded-full overflow-hidden">
               <img
-                src="https://media.licdn.com/dms/image/v2/D4D0BAQFH703r-CXyeQ/company-logo_200_200/B4DZoGp2nyJIAI-/0/1761048228314/hurtechllc_logo?e=1770249600&v=beta&t=uYPgzc7YZ-HAXalvMs_qPfMpgNeGJfrpYY2ag2mmCrk"
+                src="https://www.hurtech.co/logo.svg"
                 alt=""
                 className="w-full aspect-square"
               />
@@ -82,7 +82,7 @@ const Resume = () => {
                 </div>
                 <div className="px-4 ml-2 mt-1 border-l-2 border-l-[#9e9797]">
                   <p className="text-sm text-[#898282] font-[500]">
-                    July 2025 - Dec 2025
+                    July 2025 - March 2026
                   </p>
                   <p className="text-[13px] pb-2 font-[500] text-black dark:text-white">
                     As a React Developer at Hur Tech, I contributed to building
