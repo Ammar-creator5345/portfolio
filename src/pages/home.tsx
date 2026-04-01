@@ -72,7 +72,10 @@ const Home = () => {
             <ProjectItem
               title="NexChat"
               date="Nov 2025 - jan 2026"
-              text="I built a real-time web chat application using React.js where users can exchange messages and share images, videos, and documents, including detailed file previews and message information, focusing on smooth interactions and a clean user experience."
+              text="I built a real-time web chat application using React.js where users can
+              exchange messages and share images, videos, and documents, including detailed
+              file previews and message information, focusing on smooth interactions and a 
+              clean user experience."
               languages={["React.js", "TypeScript", "Tailwind"]}
               image="/nexChat.png"
               link="https://chat-app-cyan-two-88.vercel.app/"
@@ -80,10 +83,11 @@ const Home = () => {
             <ProjectItem
               title="GrowHire"
               date="Aug 2025 - Oct 2025"
-              text="I developed a movie search app with API integration to fetch and
-               display movie details. Implemented cast details with clickable
-               links to show related movies. Focused on responsive design and
-               smooth navigation.I built it with React.js and pure Css to enhance my skills"
+              text="I developed a job seeking platform using React.js
+              that allows users to explore job listings, apply for opportunities
+              , and build professional resumes with an integrated AI-powered builder
+              , ensuring personalized content, efficient workflows, and a seamless
+              user experience."
               languages={["React.js", "JavaScript", "Tailwind"]}
               image="./growhirePhoto.png"
               link="https://grow-hire.vercel.app/"
