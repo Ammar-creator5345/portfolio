@@ -4,12 +4,21 @@ import { motion, stagger } from "framer-motion";
 interface funcTypes {
   title: string;
   subTitle: string;
+  isAvailableText?: boolean;
 }
 const About = () => {
-  const InputItem = ({ title, subTitle }: funcTypes) => (
+  const InputItem = ({
+    title,
+    subTitle,
+    isAvailableText = false,
+  }: funcTypes) => (
     <div className="flex items-center gap-1 mt-1">
-      <span className="text-[#666666] font-semibold">{title}:</span>
-      <span className="font-[500] text-black dark:text-white">{subTitle}</span>
+      <span className="text-[#666666] text-[15px]">{title}:</span>
+      <span
+        className={`font-[500] ${isAvailableText ? "text-orange-400 " : "text-black dark:text-white"}`}
+      >
+        {subTitle}
+      </span>
     </div>
   );
   const SectionItem = ({
@@ -19,11 +28,11 @@ const About = () => {
     title: string;
     subTitle: string;
   }) => (
-    <div className="border border-[#b6b4b4] dark:border-white/40 dark:shadow-[1px_1px_6px_#282626] rounded-lg text-white p-5 w-[190px] h-[160px]">
+    <div className="flex flex-col justify-between border border-[#b6b4b4] dark:border-white/40 dark:shadow-[1px_1px_6px_#282626] rounded-lg text-white p-5 w-[190px]">
       <h1 className="text-4xl font-bold text-[orange]">{title}</h1>
       <div className="flex gap-3 pr-4 mt-2">
         <p className="w-9 h-[1px] mt-3 bg-[#aca9a9]"></p>
-        <span className="text-[#aca9a9] font-[500]">{subTitle}</span>
+        <span className="text-[#aca9a9] font-[400]">{subTitle}</span>
       </div>
     </div>
   );
@@ -54,11 +63,12 @@ const About = () => {
                 <InputItem title="First Name" subTitle="Muhammad Ammar" />
                 <InputItem title="Age" subTitle="19 Years" />
                 <InputItem title="Phone" subTitle="+92 3059047690" />
-                <InputItem title="Address" subTitle="New Iqbal Park,Lahore" />
+                <InputItem title="Address" subTitle="Hasilpur,Punjab" />
                 <InputItem title="Languages" subTitle="Urdu,English" />
               </div>
               <div>
                 <InputItem title="Nationality" subTitle="Pakistani" />
+                <InputItem title="Freelance" subTitle="Available" isAvailableText/>
                 <InputItem title="Email" subTitle="ammarsaleem5345@gmail.com" />
               </div>
             </div>
@@ -77,9 +87,9 @@ const About = () => {
             variants={fadeIn}
             className="flex items-center justify-center gap-4 flex-wrap md:justify-end"
           >
-            <SectionItem title="1+" subTitle="Years of Experience" />
-            <SectionItem title="10+" subTitle="Personal & Practice Projects" />
-            <SectionItem title="∞" subTitle="Passion for Front-End Craft" />
+            <SectionItem title="1.5+" subTitle="Years of Experience" />
+            <SectionItem title="10+" subTitle="Completed Projects" />
+            <SectionItem title="5+" subTitle="Happy Customers" />
             <SectionItem title="Always" subTitle="Eager to Collaborate" />
           </motion.div>
         </motion.div>

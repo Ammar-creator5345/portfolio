@@ -17,9 +17,9 @@ const Home = () => {
             <h1 className="text-2xl font-semibold mt-5 md:text-5xl md:mt-0">
               Hi, I'm Ammar
             </h1>
-            <h3 className="text-lg font-semibold mt-9 md:text-2xl">
-              Passionate React.js Developer focused on creating intuitive user
-              experiences
+            <h3 className="text-lg font-medium mt-9 md:text-xl">
+              Crafting fast, scalable, and seamless web experiences with the
+              MERN stack.
             </h3>
           </motion.div>
           <motion.div
@@ -37,17 +37,18 @@ const Home = () => {
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0, transition: { duration: 0.7 } }}
-          className="mt-20 text-primaryText"
+          className="mt-8 text-primaryText"
         >
           <h3 className="text-2xl font-semibold">About</h3>
           <p className="text-sm font-[500] text-[#8c8c8d]">
-            As a passionate React.js Developer with around one year of
-            experience, I build responsive and user-focused web applications
-            using JavaScript, TypeScript, React.js, Next.js, HTML, CSS, Tailwind
-            CSS, and Bootstrap. I use Git and GitHub for version control, and
-            I’m committed to writing clean, efficient code while continuously
-            improving my skills to deliver smooth, high-quality user
-            experiences.
+            As a passionate and dedicated MERN Stack Developer with 1.5 years of
+            experience, I specialize in building modern, scalable, and
+            user-focused web applications. My expertise lies in creating
+            seamless and responsive front-end experiences with React.js, while
+            leveraging Node.js, Express.js, and MongoDB to develop efficient and
+            reliable back-end solutions. I enjoy transforming ideas into
+            functional digital products with clean code and a strong focus on
+            performance and user experience.
           </p>
         </motion.div>
         <motion.div
@@ -70,8 +71,17 @@ const Home = () => {
           </div>
           <div className="flex flex-col gap-1 items-center justify-center mt-12 sm:flex-row">
             <ProjectItem
+              title="MediQueue"
+              date="Nov 2025 - Feb 2026"
+              text="I developed a hospital management application using the MERN stack that allows patients to book appointments, manage queues, and access dedicated dashboards through role-based authentication for Admin, Doctor, Receptionist, and Patient, ensuring efficient workflows.
+"
+              languages={["React.js", "Node.js", "MongoDB"]}
+              image="/mediQueue.png"
+              link="https://movie-verse-dun.vercel.app/"
+            />
+            <ProjectItem
               title="NexChat"
-              date="Nov 2025 - jan 2026"
+              date="Sep 2025 - Nov 2025"
               text="I built a real-time web chat application using React.js where users can
               exchange messages and share images, videos, and documents, including detailed
               file previews and message information, focusing on smooth interactions and a 
@@ -82,7 +92,7 @@ const Home = () => {
             />
             <ProjectItem
               title="GrowHire"
-              date="Aug 2025 - Oct 2025"
+              date="Apr 2025 - Aug 2025"
               text="I developed a job seeking platform using React.js
               that allows users to explore job listings, apply for opportunities
               , and build professional resumes with an integrated AI-powered builder
@@ -91,17 +101,6 @@ const Home = () => {
               languages={["React.js", "JavaScript", "Tailwind"]}
               image="./growhirePhoto.png"
               link="https://grow-hire.vercel.app/"
-            />
-            <ProjectItem
-              title="MovieVerse"
-              date="june 2025 - july 2025"
-              text="I developed a movie search app with API integration to fetch and
-               display movie details. Implemented cast details with clickable
-               links to show related movies. Focused on responsive design and
-               smooth navigation.I built it with React.js and pure Css to enhance my skills"
-              languages={["React.js", "JavaScript", "Css"]}
-              image="/movieversePhoto.png"
-              link="https://movie-verse-dun.vercel.app/"
             />
           </div>
         </motion.div>
